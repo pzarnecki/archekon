@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,6 +8,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import BackgroundGL from './components/BackgroundGL';
+import CookieBanner from './components/CookieBanner';
 import './App.css';
 
 function App() {
@@ -22,6 +24,10 @@ function App() {
 
   return (
     <div className="app-container">
+      <Helmet>
+        <title>Archekon - Pracownia Archeologiczno-Konserwatorska | Nadzory</title>
+        <meta name="description" content="Archekon - profesjonalne nadzory archeologiczne i badania ratownicze. Paweł Rozwód. Obszar: dolnośląskie i opolskie." />
+      </Helmet>
       <BackgroundGL />
       <Header scrolled={scrolled} />
       <main style={{ position: 'relative', zIndex: 1 }}>
@@ -32,6 +38,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <CookieBanner />
     </div>
   );
 }

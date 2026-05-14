@@ -1,0 +1,68 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(18, 21, 24, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1rem;
+  z-index: 9999;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.cookie-content p {
+  color: #f8fafc; /* Bardzo jasny, prawie biały kolor */
+  font-size: 0.95rem; /* Delikatnie zwiększony rozmiar czcionki */
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cookie-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookie-btn {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.cookie-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.cookie-close:hover {
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .cookie-content {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
